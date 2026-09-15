@@ -27,20 +27,7 @@ def research(req: ResearchRequest):
 
     result = run_agent(req.goal)
     return result
-@app.get("/api/test-openai")
-def test_openai(goal: str = "top competitors of Tesla"):
-    try:
-        result = test_openai_connection(goal)
-        return {"status": "ok", "response": result}
-    except Exception as e:
-        return {"status": "error", "message": str(e)}
-@app.get("/api/test-search")
-def test_search(query: str = "Tesla competitors 2026"):
-    try:
-        results = web_search(query)
-        return {"status": "ok", "count": len(results), "results": results}
-    except Exception as e:
-        return {"status": "error", "message": str(e)}
+
 @app.post("/api/research")
 def research(req: ResearchRequest):
     if not req.goal.strip():
