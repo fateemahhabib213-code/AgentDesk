@@ -1,4 +1,4 @@
-```yaml
+
 name: Build and deploy Python app to Azure Web App - AgentDesk
 
 on:
@@ -64,4 +64,3 @@ jobs:
         with:
           app-name: 'AgentDesk'
           slot-name: 'Production'
-```
