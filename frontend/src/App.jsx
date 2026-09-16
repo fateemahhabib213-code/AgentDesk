@@ -66,11 +66,7 @@ export default function App() {
           </span>
         </div>
 
-        <nav className="nav">
-          <span className="nav-link active">Research</span>
-          <span className="nav-link">History</span>
-          <span className="nav-link">About</span>
-        </nav>
+       
 
         <div className="status-pill">
           <span className={`status-dot ${loading ? "busy" : ""}`} />
